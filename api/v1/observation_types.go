@@ -62,10 +62,8 @@ type ObservationSpec struct {
 	// +optional
 	PersistentVolumes corev1.PersistentVolumeList `json:"persistentVolume,omitempty"`
 
-	// Ingress evtl. noch hinzufügen, bibliothek setzt aktuell jedoch keine struct field json tags
-	// -> müsste manuell implementiert werden oder in der Bibliothek hinzugefügt werden
 	// +optional
-	// Ingress networking.IngressList `json:"ingress,omitempty"`
+	Ingress corev1.ObjectReference `json:"ingress,omitempty"`
 
 	// +optional
 	HTTPEnpoints []HTTPEndpoint `json:"httpEndpoints,omitempty"`
