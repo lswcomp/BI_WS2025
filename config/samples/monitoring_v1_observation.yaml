@@ -1,0 +1,9 @@
+apiVersion: monitoring.bi-ws2025.de/v1
+kind: Observation
+metadata:
+  labels:
+    app.kubernetes.io/name: projekt
+    app.kubernetes.io/managed-by: kustomize
+  name: observation-sample
+spec:
+  # TODO(user): Add fields here
